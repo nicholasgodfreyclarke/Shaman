@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Desciption</th>
+          <th>Type<th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries %}
+        <tr>
+          <td><a href="/variable_detail/{{entry.variable_name}}">{{entry.variable_name}}</td>
+          <td></td>
+          <td>{{entry.type}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+<!-- 
+  <ul>
+    {% for entry in entries %}
+    <li><a href="/variable_detail/{{entry.variable_name}}">{{entry.variable_name}}</a></li>
+
+    {% endfor %}
+  </ul> -->
+  <a href="/new_variable" class="btn btn-primary" role="button">New Variable</a>
+{% endblock %}

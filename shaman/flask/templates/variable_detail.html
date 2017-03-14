@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+
+{% if variable_detail is defined %}
+<h2>{{variable_detail.variable_name}}</h2>
+<form action="{{ url_for('update_variable') }}" method=post>
+  <input type="hidden" name="variable_name" value="{{variable_detail.variable_name}}" />
+  <textarea class="form-control" rows="3" id="txtSource" name="source">{{variable_detail.source}}</textarea>
+  <input type="submit" value="Update Variable">
+</form>
+{% else %}
+<form action="{{ url_for('create_variable') }}" method=post>
+  Variable Name: <input type="text" name="variable_name"><br>
+  Source: <textarea class="form-control" rows="3" id="txtSource" name="source"></textarea>
+  <input type="submit" value="Create Variable">
+</form>
+{% endif %}
+
+<script src="{{ url_for('static', filename='codemirror.js') }}"></script>
+<script src="{{ url_for('static', filename='python.js') }}"></script>
+ <link rel="stylesheet" href="{{ url_for('static', filename='codemirror.css') }}">
+ <script src="{{ url_for('static', filename='variable_detail.js') }}"></script>
+
+{% endblock %}

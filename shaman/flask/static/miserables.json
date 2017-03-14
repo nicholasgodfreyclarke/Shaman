@@ -1,0 +1,8 @@
+{
+  "nodes":[
+{"name":"DURATIONIF_M","group":1},{"name":"CALENDAR_MTH","group":1},{"name":"ADD_TERM_M","group":1},{"name":"ESC_RATE_PC","group":1},{"name":"ANN_ANNUITY","group":1},{"name":"Y_ANNUITY_PP","group":1},{"name":"POL_TERM_Y","group":1},{"name":"ESC_MTH","group":1},{"name":"PER_TO_VAL_M","group":1},{"name":"POL_TERM_M","group":1},{"name":"ENTRY_MONTH","group":1},{"name":"DUR_M","group":1}
+  ],
+  "links":[
+    {"source":2,"target":9,"value":1},{"source":6,"target":9,"value":1},{"source":0,"target":11,"value":1},{"source":9,"target":11,"value":1},{"source":0,"target":10,"value":1},{"source":8,"target":10,"value":1},{"source":0,"target":1,"value":1},{"source":10,"target":1,"value":1},{"source":9,"target":1,"value":1},{"source":4,"target":5,"value":1},{"source":1,"target":5,"value":1},{"source":11,"target":5,"value":1},{"source":7,"target":5,"value":1},{"source":3,"target":5,"value":1}
+  ]
+}
